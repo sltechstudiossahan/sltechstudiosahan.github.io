@@ -18,22 +18,35 @@ body {
   animation: bg 25s infinite;
 }
 
-/* Change these images */
+/* Background images */
 @keyframes bg {
-  0%   { background-image: url("ChatGPT Image Oct 13, 2025, 08_22_10 AM.png"); }
+   0%   { background-image: url("ChatGPT Image Oct 13, 2025, 08_22_10 AM.png"); }
   20%  { background-image: url("WhatsApp Image 2023-09-19 at 21.50.17.jpg"); }
   40%  { background-image: url("WhatsApp Image 2026-02-03 at 9.11.57 PM.jpeg"); }
 }
 
-/* GLASS BOX */
+/* Dark overlay for readability */
+.overlay {
+  min-height: 100%;
+  background: rgba(0,0,0,0.25);
+}
+
+/* Glass container */
 .glass {
   min-height: 100%;
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(4px);
   padding: 30px;
 }
 
-/* GALLERY */
+/* Main container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  color: #111;
+}
+
+/* Top gallery */
 .top-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
@@ -46,24 +59,29 @@ body {
   height: 220px;
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 2px solid #fff;
 }
 
-/* CONTENT */
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-
+/* Headings */
 h1, h2 {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 2px solid #444;
+  color: #000;
 }
 
+/* Text */
+p, li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #111;
+}
+
+/* Infobox */
 .infobox {
   float: right;
   width: 260px;
-  background: #f8f9fa;
+  background: rgba(255,255,255,0.95);
   padding: 10px;
+  border-radius: 6px;
   border: 1px solid #aaa;
   margin-left: 20px;
 }
@@ -72,29 +90,40 @@ h1, h2 {
 
 <body>
 
+<div class="overlay">
 <div class="glass">
 <div class="container">
 
-  <!-- TOP IMAGES -->
+  <!-- TOP IMAGE GALLERY -->                
   <div class="top-gallery">
-    <img src="WhatsApp Image 2023-09-19 at 21.50.17.jpg">
     <img src="ChatGPT Image Oct 13, 2025, 08_22_10 AM.png">
+    <img src="WhatsApp Image 2023-09-19 at 21.50.17.jpg">
     <img src="WhatsApp Image 2026-02-03 at 9.11.57 PM.jpeg">
+    <img src="WhatsApp Image 2024-12-25 at 09.25.25_17c3571e.jpg">
   </div>
 
   <h1>R. M. Sahan Lakmina</h1>
 
   <div class="infobox">
-    <img src="images/img1.jpg" width="100%">
+    <img src="WhatsApp Image 2023-09-19 at 21.50.17.jpg" width="100%">
     <p><b>Born:</b> 25 April 2011</p>
     <p><b>Age:</b> 15</p>
+    <p><b>Nationality:</b> Sri Lankan</p>
     <p><b>Title:</b> Sri Lankan #7 Best Developer</p>
     <p><b>Founder:</b> SL Tech Studios</p>
   </div>
 
   <p>
-    R. M. Sahan Lakmina is a certificated Sri Lankan web designer, developer and keyboardist.
-    A real legend who does not try to be famous.
+    R. M. Sahan Lakmina is a Sri Lankan web designer, web developer, and 
+    keyboardist. He is the founder and owner of SL Tech Studios. 
+    He is known as a real legend who does not try to be famous, 
+    focusing instead on skills, creativity, and continuous learning.
+  </p>
+
+  <h2>Early Life and Education</h2>
+  <p>
+    Born on 25 April 2011, Sahan studied at Sri Rahula College, Anuradhapura. 
+    From an early age, he showed strong interest in computers and technology.
   </p>
 
   <h2>Skills</h2>
@@ -106,9 +135,15 @@ h1, h2 {
     <li>Music & Keyboard</li>
   </ul>
 
+  <h2>Philosophy</h2>
+  <p>
+    "A real legend does not chase fame, he builds skills so strong 
+    that fame chases him."
+  </p>
+
+</div>
 </div>
 </div>
 
 </body>
 </html>
-
